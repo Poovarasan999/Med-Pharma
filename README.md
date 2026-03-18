@@ -1,2 +1,0 @@
-# Med-Pharma
-E-Commerce
