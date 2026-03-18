@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Pharma — Lab Tests at Home</title>
+    <meta name="description"
+        content="Book lab tests from home with Med Pharma. NABL certified labs, trained phlebotomists, same-day reports, and up to 60% off on all diagnostic tests.">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section>
+        <nav class="navbar">
+            <!-- Top section: logo, search, buttons -->
+            <div class="nav-top">
+                <button class="menu-btn" onclick="openMenu()"><i class="bx bx-menu"></i></button>
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <div class="logo-box">MED</div>
+                    <span class="logo-name">Med Pharma</span>
+                </a>
+                <!-- Search bar -->
+                <div class="search-bar">
+                    <i class="bx bx-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for medicines, lab tests...">
+                </div>
+
+                <!-- Cart and Login -->
+                <div class="nav-buttons">
+                    <button class="cart-btn"><i class="bx bx-cart"></i></button>
+                    <button class="login-btn"><i class="bx bx-user-circle"></i> Login</button>
+                </div>
+            </div>
+
+            <!-- Bottom section: navigation links (hidden on mobile) -->
+            <div class="nav-links">
+                <a href="#">Buy Medicines</a>
+                <a href="#">Find Doctors</a>
+                <a href="#" class="active">Lab Tests</a>
+                <a href="#">Circle Membership</a>
+                <a href="#">Health Records</a>
+                <a href="#">Buy Insurance <span class="new-tag">New</span></a>
+            </div>
+
+        </nav>
+
+        <!-- Dark overlay behind sidebar -->
+        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+        <!-- Sidebar menu (for mobile) -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <span>Menu</span>
+                <button onclick="closeMenu()"><i class="bx bx-x"></i></button>
+            </div>
+            <a href="#"><i class="bx bx-capsule"></i> Buy Medicines</a>
+            <a href="#"><i class="bx bx-user-plus"></i> Find Doctors</a>
+            <a href="#" class="active"><i class="bx bx-test-tube"></i> Lab Tests</a>
+            <a href="#"><i class="bx bx-group"></i> Circle Membership</a>
+            <a href="#"><i class="bx bx-file"></i> Health Records</a>
+            <a href="#"><i class="bx bx-shield-plus"></i> Buy Insurance <span class="new-tag">New</span></a>
+        </div>
+    </section>
+
+    <!-- ========== HERO BANNER ========== -->
+    <section class="inst" id="inst">
+        <div class="inst-content">
+            <h1>Book Lab Tests <span class="highlight">From Home</span></h1>
+            <p>Safe &amp; hygienic sample collection at your doorstep. Get accurate results delivered digitally — fast,
+                affordable, and hassle-free.</p>
+            <div class="inst-features">
+                <div class="inst-feat"><i class="bx bx-home-heart"></i> Home Collection</div>
+                <div class="inst-feat"><i class="bx bx-time-five"></i> Reports in 6 Hrs</div>
+                <div class="inst-feat"><i class="bx bx-check-shield"></i> NABL Certified</div>
+            </div>
+            <div class="inst-actions">
+                <button class="btn-primary"
+                    onclick="document.getElementById('popular-tests').scrollIntoView({behavior:'smooth'})">Browse
+                    Tests</button>
+                <button class="btn-outline"
+                    onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">View
+                    Packages</button>
+            </div>
+        </div>
+        <div class="inst-visual">
+            <div class="inst-card"><i class="bx bx-test-tube"></i><span>50+ Test Panels</span></div>
+            <div class="inst-card"><i class="bx bx-group"></i><span>2M+ Customers</span></div>
+            <div class="inst-card"><i class="bx bx-badge-check"></i><span>99.8% Accuracy</span></div>
+        </div>
+    </section>
+
+    <!-- ========== QUICK ACTIONS ========== -->
+    <section class="quick-actions">
+        <a href="#" class="action-item">
+            <div class="action-icon"><i class="bx bx-upload"></i></div>
+            <span>Upload Prescription</span>
+        </a>
+        <a href="#" class="action-item">
+            <div class="action-icon"><i class="bx bx-package"></i></div>
+            <span>Explore Packages</span>
+        </a>
+        <a href="#" class="action-item">
+            <div class="action-icon"><i class="bx bx-body"></i></div>
+            <span>Full Body Checkup</span>
+        </a>
+        <a href="#" class="action-item">
+            <div class="action-icon"><i class="bx bx-heart"></i></div>
+            <span>Pro Health</span>
+        </a>
+    </section>
+
+    <!-- ========== HEALTH CHECK CATEGORIES ========== -->
+    <section class="section" id="categories">
+        <div class="section-header">
+            <h2>Health Check Categories</h2>
+            <a href="#" class="view-all">View All <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <div class="category-scroll">
+            <a href="#" class="category-chip"><i class="bx bx-body"></i> Full Body Checkup</a>
+            <a href="#" class="category-chip"><i class="bx bxs-droplet"></i> Diabetes</a>
+            <a href="#" class="category-chip"><i class="bx bx-heart"></i> Heart</a>
+            <a href="#" class="category-chip"><i class="bx bxs-vial"></i> Blood Studies</a>
+            <a href="#" class="category-chip"><i class="bx bx-sun"></i> Vitamin</a>
+            <a href="#" class="category-chip"><i class="bx bx-shield-quarter"></i> Thyroid</a>
+            <a href="#" class="category-chip"><i class="bx bx-filter-alt"></i> Kidney</a>
+            <a href="#" class="category-chip"><i class="bx bx-stats"></i> Liver</a>
+        </div>
+    </section>
+
+    <!-- ========== POPULAR LAB TESTS ========== -->
+    <section class="section" id="popular-tests">
+        <div class="section-header">
+            <h2>Popular Lab Tests</h2>
+            <a href="#" class="view-all">View All <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <div class="test-grid">
+            <div class="test-card">
+                <div class="test-badge">30 Tests</div>
+                <h3>Complete Blood Count (CBC)</h3>
+                <p class="test-desc">Comprehensive blood analysis covering RBC, WBC, platelets, and hemoglobin levels.
+                </p>
+                <div class="test-price">
+                    <span class="price-now">₹419</span>
+                    <span class="price-old">₹1,047</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge">3 Tests</div>
+                <h3>HbA1c (Glycated Hemoglobin)</h3>
+                <p class="test-desc">Monitors average blood sugar over 3 months — ideal for diabetes management.</p>
+                <div class="test-price">
+                    <span class="price-now">₹649</span>
+                    <span class="price-old">₹1,623</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge recommended">Recommended</div>
+                <h3>Lipid Profile Test</h3>
+                <p class="test-desc">8 parameters including total cholesterol, HDL, LDL, and triglycerides.</p>
+                <div class="test-price">
+                    <span class="price-now">₹829</span>
+                    <span class="price-old">₹2,072</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge">11 Tests</div>
+                <h3>Liver Function Test (LFT)</h3>
+                <p class="test-desc">Complete liver health screening — bilirubin, ALT, AST, albumin, and more.</p>
+                <div class="test-price">
+                    <span class="price-now">₹829</span>
+                    <span class="price-old">₹2,072</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge">1 Test</div>
+                <h3>Fasting Blood Sugar (FBS)</h3>
+                <p class="test-desc">Measures glucose level after an overnight fast to detect diabetes early.</p>
+                <div class="test-price">
+                    <span class="price-now">₹100</span>
+                    <span class="price-old">₹250</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge recommended">Recommended</div>
+                <h3>Thyroid Profile (T3, T4, TSH)</h3>
+                <p class="test-desc">Full thyroid panel to diagnose hypo/hyperthyroidism and hormonal imbalances.</p>
+                <div class="test-price">
+                    <span class="price-now">₹709</span>
+                    <span class="price-old">₹1,772</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge">14 Tests</div>
+                <h3>Kidney Function Test (KFT)</h3>
+                <p class="test-desc">Kidney health check with creatinine, BUN, electrolytes, and more.</p>
+                <div class="test-price">
+                    <span class="price-now">₹1,029</span>
+                    <span class="price-old">₹2,573</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+            <div class="test-card">
+                <div class="test-badge">17 Tests</div>
+                <h3>Urine Routine Examination</h3>
+                <p class="test-desc">Complete urinalysis covering pH, protein, glucose, RBC, WBC, and casts.</p>
+                <div class="test-price">
+                    <span class="price-now">₹329</span>
+                    <span class="price-old">₹822</span>
+                    <span class="discount">60% off</span>
+                </div>
+                <button class="btn-add-cart"><i class="bx bx-cart-add"></i> Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HEALTH PACKAGES ========== -->
+    <section class="section packages-section" id="packages">
+        <div class="section-header">
+            <h2>Health Packages For You</h2>
+            <a href="#" class="view-all">View All <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <div class="package-grid">
+            <div class="package-card">
+                <div class="package-icon"><i class="bx bx-body"></i></div>
+                <h3>Full Body Checkup</h3>
+                <p>70+ tests covering vital organs, vitamins, hormones, and metabolic health.</p>
+                <div class="package-meta">
+                    <span class="pkg-tests"><i class="bx bx-test-tube"></i> 70+ Tests</span>
+                    <span class="pkg-price">Starts ₹1,499</span>
+                </div>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+            <div class="package-card">
+                <div class="package-icon women"><i class="bx bx-female-sign"></i></div>
+                <h3>Women's Wellness</h3>
+                <p>Tailored panel for women — includes thyroid, PCOD, iron, vitamin D &amp; hormones.</p>
+                <div class="package-meta">
+                    <span class="pkg-tests"><i class="bx bx-test-tube"></i> 55+ Tests</span>
+                    <span class="pkg-price">Starts ₹1,899</span>
+                </div>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+            <div class="package-card">
+                <div class="package-icon men"><i class="bx bx-male-sign"></i></div>
+                <h3>Men's Wellness</h3>
+                <p>Comprehensive screening for heart, liver, kidney, diabetes &amp; testosterone levels.</p>
+                <div class="package-meta">
+                    <span class="pkg-tests"><i class="bx bx-test-tube"></i> 60+ Tests</span>
+                    <span class="pkg-price">Starts ₹1,799</span>
+                </div>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+            <div class="package-card">
+                <div class="package-icon diabetes"><i class="bx bxs-droplet"></i></div>
+                <h3>Diabetes Screening</h3>
+                <p>In-depth diabetes panel with HbA1c, FBS, PPBS, insulin, and kidney markers.</p>
+                <div class="package-meta">
+                    <span class="pkg-tests"><i class="bx bx-test-tube"></i> 25+ Tests</span>
+                    <span class="pkg-price">Starts ₹999</span>
+                </div>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+            <div class="package-card">
+                <div class="package-icon senior"><i class="bx bx-group"></i></div>
+                <h3>Senior Citizen Checkup</h3>
+                <p>Age-appropriate tests for bone health, cardiac risk, kidney &amp; liver function.</p>
+                <div class="package-meta">
+                    <span class="pkg-tests"><i class="bx bx-test-tube"></i> 80+ Tests</span>
+                    <span class="pkg-price">Starts ₹2,499</span>
+                </div>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+            <div class="package-card">
+                <div class="package-icon heart"><i class="bx bx-heart"></i></div>
+                <h3>Heart Health Checkup</h3>
+                <p>Complete cardiac screening — lipid panel, hs-CRP, homocysteine &amp; ECG markers.</p>
+                <div class="package-meta">
+                    <span class="pkg-tests"><i class="bx bx-test-tube"></i> 30+ Tests</span>
+                    <span class="pkg-price">Starts ₹1,299</span>
+                </div>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BROWSE BY HEALTH CONCERN ========== -->
+    <section class="section" id="pop-categories">
+        <div class="section-header">
+            <h2>Browse by Health Concern</h2>
+            <a href="#" class="view-all">View All <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+        <div class="concern-grid">
+            <a href="#" class="concern-item"><i class="bx bx-female"></i><span>Pregnancy</span></a>
+            <a href="#" class="concern-item"><i class="bx bxs-virus"></i><span>Fever &amp; Infection</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-bone"></i><span>Bone &amp; Joint</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-pulse"></i><span>Allergy</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-dna"></i><span>Hormone Screening</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-run"></i><span>Weight Management</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-search-alt-2"></i><span>Cancer Screening</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-wind"></i><span>Lung Health</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-capsule"></i><span>Iron Studies</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-shield-plus"></i><span>Immunity</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-brain"></i><span>Stress Panel</span></a>
+            <a href="#" class="concern-item"><i class="bx bx-trending-up"></i><span>Fertility</span></a>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ==========   -->
+    <section class="cta-banner">
+        <div class="cta-content">
+            <h2>Don't wait — take charge of your health today</h2>
+            <p>Book a full body checkup at home and get reports within 24 hours.</p>
+            <button class="btn-primary btn-lg">Book Full Body Checkup</button>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Med Pharma</h4>
+                <p>Your trusted partner in diagnostics and preventive healthcare. Accurate results, delivered with care.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Lab Tests at Home</a>
+                <a href="#">Health Packages</a>
+                <a href="#">Radiology &amp; Scans</a>
+                <a href="#">Doctor Consultations</a>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#">About Us</a>
+                <a href="#">Partner Labs</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-youtube"></i></a>
+                </div>
+                <p class="footer-email"><i class="bx bx-envelope"></i> support@medpharma.com</p>
+                <p class="footer-phone"><i class="bx bx-phone"></i> 1800-200-3000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Med Pharma. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Help Modal -->
+    <div class="modal-overlay" id="helpModal">
+        <div class="help-modal">
+            <span class="close-modal" onclick="closeHelpModal()">&times;</span>
+            <div class="advisor-img">
+                <img src="health_advisor.png" alt="Health Advisor">
+            </div>
+            <h2>Need help in booking a lab test?</h2>
+            <p>Share your number, and our health advisor will call you or call us directly at
+                <strong>08045572851</strong>
+            </p>
+
+            <div class="form-group">
+                <label>Phone Number<span>*</span></label>
+                <div class="input-wrapper">
+                    <span class="country-code">+91</span>
+                    <input type="text" id="phoneInput" placeholder="Type here" maxlength="10">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-callback" id="callbackBtn" disabled>Request a CallBack</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
