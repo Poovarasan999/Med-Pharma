@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'); */
 
 * {
     margin: 0;
@@ -40,7 +40,7 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 12px 40px;
-    background-color: #f08934;
+    background-color: #f39d57;
 }
 
 .menu-btn {
@@ -85,7 +85,6 @@ button {
     border-radius: 8px;
     padding: 0 16px;
     margin: 0 30px;
-    transition: border-color 0.2s;
 }
 
 .search-bar:focus-within {
@@ -128,7 +127,6 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: background 0.2s;
 }
 
 .cart-btn:hover {
@@ -145,7 +143,6 @@ button {
     color: #1a3c6e;
     font-weight: 600;
     font-size: 14px;
-    transition: all 0.2s;
 }
 
 .login-btn i {
@@ -171,7 +168,6 @@ button {
     font-size: 14px;
     font-weight: 500;
     color: #555;
-    transition: color 0.2s;
     white-space: nowrap;
     position: relative;
 }
@@ -249,7 +245,6 @@ button {
     font-size: 15px;
     color: #555;
     border-bottom: 1px solid #f5f5f5;
-    transition: background 0.2s;
 }
 
 .sidebar a i {
@@ -278,7 +273,6 @@ button {
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-primary:hover {
@@ -306,7 +300,6 @@ button {
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
-    transition: all 0.2s;
 }
 
 .btn-outline:hover {
@@ -423,11 +416,6 @@ button {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    transition: transform 0.2s;
-}
-
-.action-item:hover {
-    transform: translateY(-2px);
 }
 
 .action-icon {
@@ -441,7 +429,6 @@ button {
     justify-content: center;
     font-size: 26px;
     color: #f3a86a;
-    transition: all 0.2s;
 }
 
 .action-item:hover .action-icon {
@@ -480,7 +467,6 @@ button {
     font-size: 14px;
     font-weight: 600;
     color: #f3a86a;
-    transition: gap 0.2s;
 }
 
 .view-all:hover {
@@ -506,7 +492,6 @@ button {
     font-weight: 500;
     color: #444;
     white-space: nowrap;
-    transition: all 0.2s;
 }
 
 .category-chip i {
@@ -531,7 +516,6 @@ button {
     border-radius: 12px;
     padding: 24px;
     border: 1px solid #fdf2e9;
-    transition: all 0.2s;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -613,7 +597,6 @@ button {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    transition: all 0.2s;
     cursor: pointer;
 }
 
@@ -637,7 +620,6 @@ button {
     border-radius: 12px;
     padding: 28px;
     border: 1px solid #fdf2e9;
-    transition: all 0.2s;
     text-align: center;
 }
 
@@ -703,7 +685,6 @@ button {
     background: #fff;
     border-radius: 12px;
     border: 1px solid #fdf2e9;
-    transition: all 0.2s;
 }
 
 .concern-item i {
@@ -889,7 +870,6 @@ button {
     justify-content: center;
     padding: 20px;
     opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 .modal-overlay.show {
@@ -906,13 +886,9 @@ button {
     padding: 32px;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
 }
 
-.modal-overlay.show .help-modal {
-    transform: translateY(0);
-}
+
 
 .close-modal {
     position: absolute;
@@ -985,7 +961,6 @@ button {
     border-radius: 12px;
     padding: 12px 16px;
     background: #fff;
-    transition: border-color 0.2s;
 }
 
 .input-wrapper:focus-within {
@@ -1024,7 +999,6 @@ button {
     padding: 12px 24px;
     border-radius: 10px;
     font-size: 15px;
-    transition: all 0.2s;
 }
 
 .btn-callback:not(:disabled):hover {
