@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="lab_tests.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -17,22 +19,93 @@
     <section>
         <nav class="navbar">
             <!-- Top section-->
-            <div class="nav-top">
-                <button class="menu-btn" onclick="openMenu()"><i class="bx bx-menu"></i></button>
-                <!-- Logo -->
-                <a href="#" class="logo">
-                    <div class="logo-box">MED</div>
-                    <span class="logo-name">Med Pharma</span>
-                </a>
-                <!-- Search bar -->
-                <div class="search-bar">
-                    <i class="bx bx-search"></i>
-                    <input type="text" id="searchInput" placeholder="Search for medicines, lab tests...">
+            <header class="header">
+                <div class="header__top">
+                    <div class="header__left">
+                        <div class="logo">
+                            <div class="logo__icon">
+                                <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+                            </div>
+                            <h1>Med-Pharma</h1>
+                        </div>
+                        <div class="logo__2" id="addressToggle" role="button" tabindex="0"
+                            aria-label="Open delivery location panel">
+                            <div class="map__logo">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            </div>
+                            <div class="address">
+                                <p>Delivery Address</p>
+                                <p>Vellore 632403 <i class="fa-solid fa-angle-down" aria-hidden="true"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__search">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input type="text" id="searchInput" placeholder="Search Medicines">
+                    </div>
+                    <div class="header__right">
+                        <button class="icon-btn" id="cartToggle" aria-label="cart">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                            <span class="badge" id="cartBadge">0</span>
+                        </button>
+                        <button class="login-btn" id="loginToggle" type="button">
+                            Login
+                            <i class="fa-regular fa-user" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-                <!-- Cart and Login -->
-                <div class="nav-buttons">
-                    <button class="cart-btn"><i class="bx bx-cart"></i></button>
-                    <button class="login-btn"><i class="bx bx-user-circle"></i> Login</button>
+            </header>
+
+            <div class="location-overlay" id="locationOverlay"></div>
+            <aside class="location-panel" id="locationPanel" aria-label="Delivery location panel">
+                <div class="location-panel__top">
+                    <button type="button" class="location-panel__back" id="locationClose"
+                        aria-label="Close location panel">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <h3>Deliver to</h3>
+                </div>
+                <button type="button" class="location-panel__btn location-panel__btn--primary">
+                    <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+                    Current Location
+                </button>
+                <p class="location-panel__or">OR</p>
+                <button type="button" class="location-panel__btn location-panel__btn--outline">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Choose a different location
+                </button>
+            </aside>
+
+            <div class="cart-overlay" id="cartOverlay"></div>
+            <div class="cart-modal" id="cartModal" aria-label="Order details popup">
+                <div class="cart-modal__top">
+                    <h3>Order Details</h3>
+                    <button type="button" class="cart-modal__close" id="cartClose" aria-label="Close order details">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="cart-modal__body">
+                    <p class="cart-modal__empty"></p>
+                </div>
+            </div>
+
+            <div class="login-overlay" id="loginOverlay"></div>
+            <div class="login-modal" id="loginModal" aria-label="Login form popup">
+                <div class="login-modal__top">
+                    <h3>Login</h3>
+                    <button type="button" class="login-modal__close" id="loginClose" aria-label="Close login form">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="login-modal__body">
+                    <label for="loginName">Full Name</label>
+                    <input type="text" id="loginName" placeholder="Enter your name">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password">
+                    <p class="login-modal__error" id="loginError"></p>
+                    <button type="button" class="login-modal__submit" id="loginSubmit">Login Now</button>
                 </div>
             </div>
             <!-- Bottom section: -->
@@ -48,7 +121,7 @@
 
         <div class="overlay" id="overlay" onclick="closeMenu()"></div>
 
-        
+
         <div class="sidebar" id="sidebar">
             <div class="sidebar-top">
                 <span>Menu</span>
@@ -62,7 +135,7 @@
         </div>
     </section>
 
-      <!-- instruction banner  -->
+    <!-- instruction banner  -->
     <section class="inst" id="inst">
         <div class="inst-content">
             <h1>Book Lab Tests <span class="highlight">From Home</span></h1>
@@ -328,41 +401,61 @@
     </section>
 
     <!-- ========== footer ========== -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Med Pharma</h4>
-                <p>Your trusted partner in diagnostics and preventive healthcare. Accurate results, delivered with care.
-                </p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <a href="#">Lab Tests at Home</a>
-                <a href="#">Health Packages</a>
-                <a href="#">Radiology &amp; Scans</a>
-                <a href="#">Doctor Consultations</a>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="#">About Us</a>
-                <a href="#">Partner Labs</a>
-                <a href="#">Careers</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <div class="social-links">
-                    <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-                    <a href="#"><i class="bx bxl-twitter"></i></a>
-                    <a href="#"><i class="bx bxl-instagram"></i></a>
-                    <a href="#"><i class="bx bxl-youtube"></i></a>
+    <footer class="site-footer">
+        <div class="site-footer__main">
+            <div class="site-footer__brand">
+                <div class="logo">
+                    <div class="logo__icon">
+                        <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+                    </div>
+                    <h2>Med-Pharma</h2>
                 </div>
-                <p class="footer-email"><i class="bx bx-envelope"></i> support@medpharma.com</p>
-                <p class="footer-phone"><i class="bx bx-phone"></i> 1800-200-3000</p>
+                <p>
+                    Your trusted online pharmacy for medicines, wellness products, personal care, and daily health
+                    essentials with fast delivery and genuine quality.
+                </p>
+                <div class="site-footer__social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="site-footer__links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Track Order</a>
+            </div>
+
+            <div class="site-footer__links">
+                <h3>Categories</h3>
+                <a href="#">Medicines</a>
+                <a href="#">Health Devices</a>
+                <a href="#">Personal Care</a>
+                <a href="#">Supplements</a>
+            </div>
+
+            <div class="site-footer__links">
+                <h3>Customer Support</h3>
+                <a href="#">FAQs</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Return Policy</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="site-footer__contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> support@medpharma.com</p>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Chennai, Tamil Nadu, India</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Med Pharma. All rights reserved.</p>
+
+        <div class="site-footer__bottom">
+            <p>&copy; 2026 Med-Pharma. All Rights Reserved.</p>
         </div>
     </footer>
     <!-- Help Modal -->
