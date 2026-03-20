@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Med-Pharma Specialties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/FD_styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img class="brand__logo" src="https://img.icons8.com/ios-filled/64/000000/syringe.png" alt="Medicine & Injection" />
+        <span class="brand__text">Med-Pharma @<br/>your door step 24/7</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#find-doctor" class="nav-link active">Find Doctors</a>
+        <a href="#lab-tests" class="nav-link">Lab Tests</a>
+        <a href="#circle" class="nav-link">Circle Membership</a>
+        <a href="#health-records" class="nav-link">Health Records</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn--primary" id="loginBtn">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Find a doctor">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Find a Doctor in 3 easy steps</h1>
+          <p>Pick a speciality, choose a convenient date & location, and book an online consultation with top doctors.</p>
+
+          <form id="finderForm" class="finder-form" autocomplete="off">
+            <label class="field">
+              <span class="field__label">Select Speciality</span>
+              <select id="speciality" required>
+                <option value="">Select Speciality</option>
+                <option value="general-physician">General Physician / Internal Medicine</option>
+                <option value="dermatology">Dermatology</option>
+                <option value="obstetrics-and-gynaecology">Obstetrics &amp; Gynaecology</option>
+                <option value="orthopaedics">Orthopaedics</option>
+                <option value="ent">ENT</option>
+                <option value="neurology">Neurology</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="urology">Urology</option>
+                <option value="gastroenterology">Gastroenterology / GI medicine</option>
+                <option value="psychiatry">Psychiatry</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Select Date</span>
+              <input id="date" type="date" value="" />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Preferred Location / Pincode</span>
+              <input id="pincode" type="text" placeholder="Enter city or pincode" />
+            </label>
+
+            <button class="btn btn--accent" type="submit">Search</button>
+          </form>
+
+         </div>
+
+      </section>
+
+    <section id="specialties" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Browse by Specialties</h2>
+          <p>Choose from 100+ medical specialities and get connected with experienced doctors instantly.</p>
+        </header>
+
+        <div class="cards-grid" id="specialtiesGrid">
+          <!-- Cards rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gray" id="how-it-works">
+      <div class="container">
+        <header class="section-header">
+          <h2>How to Consult a Doctor</h2>
+          <p>Book your online doctor consultation in a few simple steps.</p>
+        </header>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__icon">1</div>
+            <div class="step__body">
+              <h3>Choose the doctor</h3>
+              <p>Select a speciality and pick from verified doctors available online.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">2</div>
+            <div class="step__body">
+              <h3>Book your appointment</h3>
+              <p>Pick a time slot and confirm your appointment instantly.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">3</div>
+            <div class="step__body">
+              <h3>Start consultation</h3>
+              <p>Join the consultation room at the scheduled time. Follow up via chat for 7 days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a href="#specialties" class="btn btn--primary">Browse Specialities</a>
+          <a href="#" class="btn btn--secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-header">
+          <h2>Med-Pharma Specialities - Expertise You Can Trust</h2>
+          <p>We offer advanced services across a wide range of medical specialities, backed by experienced doctors and trusted clinical guidance.</p>
+        </header>
+
+        <div class="content-grid">
+          <div>
+            <h3>Common Specialities</h3>
+            <ul class="bullet-list">
+              <li><strong>Dermatology</strong> – Skin, hair and nail conditions.</li>
+              <li><strong>Obstetrics &amp; Gynaecology</strong> – Women’s reproductive health.</li>
+              <li><strong>General Physician</strong> – Non-surgical medical care.</li>
+              <li><strong>Paediatrics</strong> – Health care for infants and children.</li>
+              <li><strong>Psychiatry</strong> – Mental health and emotional wellbeing.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Why choose online consultation?</h3>
+            <ul class="bullet-list">
+              <li>Access qualified doctors 24x7.</li>
+              <li>Get consultations within 15 minutes.</li>
+              <li>Consult from anywhere without travel.</li>
+              <li>Follow up via chat for 7 days.</li>
+              <li>Affordable rates and personalised care.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gray" id="health-articles">
+      <div class="container">
+        <header class="section-header">
+          <h2>Health Articles For You</h2>
+          <p>Explore curated articles to stay informed about health, wellness, and healthcare trends.</p>
+        </header>
+
+        <div class="articles-grid" id="articlesGrid">
+          <!-- Articles rendered by JS -->
+        </div>
+
+        <div class="articles-footer">
+          <a class="link" target="_blank" rel="noreferrer">View All Articles</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>About Med-Pharma</h3>
+        <p>Trusted healthcare platform providing online doctor consultations, lab tests, medicines, and healthcare guidance.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-list">
+          <li><a href="#specialties">Doctors by Specialty</a></li>
+          <li><a href="#lab-tests">Lab Tests at Home</a></li>
+          <li><a href="#">Online Medicines</a></li>
+          <li><a href="#">Circle Membership</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul class="footer-list">
+          <li><a target="_blank" rel="noreferrer">FAQs</a></li>
+          <li><a target="_blank" rel="noreferrer">Terms &amp; Conditions</a></li>
+          <li><a target="_blank" rel="noreferrer">Privacy Policy</a></li>
+          <li><a target="_blank" rel="noreferrer">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@medpharma.com">support@med-pharma.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Med-Pharma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
