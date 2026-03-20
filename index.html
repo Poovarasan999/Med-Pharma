@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedPharma healthcare and medicine delivery platform.">
+    <title>MedPharma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__left">
+                <div class="logo">
+                    <div class="logo__icon">
+                        <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+                    </div>
+                    <h1>MedPharma</h1>
+                </div>
+                <div class="logo__2" id="addressToggle" role="button" tabindex="0" aria-label="Open delivery location panel">
+                    <div class="map__logo">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    </div>
+                    <div class="address">
+                        <p>Delivery Address</p>
+                        <p>Vellore 632403 <i class="fa-solid fa-angle-down" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="header__search">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" placeholder="Search Medicines">
+            </div>
+            <div class="header__right">
+                <button class="icon-btn" id="cartToggle" aria-label="cart">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                </button>
+                <button class="login-btn" id="loginToggle" type="button">
+                    Login
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="header__mid" aria-label="Quick links">
+            <a href="#">Buy Medicines</a>
+            <a href="#">Find Doctors</a>
+            <a href="#">Lab Tests</a>
+            <a href="#">Circle Membership</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <nav class="header__bottom" aria-label="Product categories">
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">MedPharma Products</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Personal Care</h4>
+                        <a href="#">Skin Care</a>
+                        <a href="#">Oral Care</a>
+                        <a href="#">Adult Diapers</a>
+                        <a href="#">Sanitary Pads</a>
+                        <a href="#">Sexual Wellness</a>
+                        <a href="#">Mens Grooming</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Baby Care</h4>
+                        <a href="#">Diapers &amp; Wipes</a>
+                        <a href="#">Skin &amp; Oral Care</a>
+                        <a href="#">Feeding &amp; Nursing</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>OTC</h4>
+                        <a href="#">Cold &amp; Cough</a>
+                        <a href="#">Pain Relief</a>
+                        <a href="#">Eye &amp; Ear Care</a>
+                        <a href="#">Indigestion</a>
+                        <a href="#">First Aid</a>
+                        <a href="#">Other OTC</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Vitamins &amp; Supplements</h4>
+                        <a href="#">Vitamins</a>
+                        <a href="#">Supplements</a>
+                        <a href="#">Nutrition Powders</a>
+                        <a href="#">Honey</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Food &amp; Drink</h4>
+                        <a href="#">Juices</a>
+                        <a href="#">ORS Drinks</a>
+                        <a href="#">Multi Grain Food</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Baby Care</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Diapering</h4>
+                        <a href="#">Diapers</a>
+                        <a href="#">Wipes</a>
+                        <h4>Diaper By Weight</h4>
+                        <a href="#">0 to 7 Kg</a>
+                        <a href="#">7 to 14 Kg</a>
+                        <a href="#">14 to 18 Kg</a>
+                        <a href="#">Above 18 Kg</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Baby Food</h4>
+                        <a href="#">Baby Cereals</a>
+                        <a href="#">Formula Milk</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Baby Skin Care</h4>
+                        <a href="#">Baby Creams</a>
+                        <a href="#">Baby Lotions</a>
+                        <a href="#">Baby Massage Oils</a>
+                        <a href="#">Baby Lip Balms</a>
+                        <a href="#">Baby Sunscreens</a>
+                        <a href="#">Baby Powders</a>
+                        <a href="#">Rash Creams</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Baby Food By Age</h4>
+                        <a href="#">Preterm</a>
+                        <a href="#">0 to 6 Months</a>
+                        <a href="#">6 to 12 Months</a>
+                        <a href="#">12 to 18 Months</a>
+                        <a href="#">18 to 24 Months</a>
+                        <a href="#">Above 2 Years</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Baby Hair Care</h4>
+                        <a href="#">Baby Shampoos</a>
+                        <a href="#">Baby Hair Oils</a>
+                        <h4>Baby Bath</h4>
+                        <a href="#">Soaps &amp; Bars</a>
+                        <a href="#">Body Wash</a>
+                        <a href="#">Baby Wash</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Nutritional Drinks &amp;
+                    Supplements</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Nutritional Drinks</h4>
+                        <a href="#">Adult Nutrition</a>
+                        <a href="#">Kids Nutrition</a>
+                        <a href="#">Specialty Nutrition</a>
+                        <a href="#">Rehydration Drinks</a>
+                        <a href="#">Green Tea</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Sports Nutrition</h4>
+                        <a href="#">Protein Powders &amp; Drinks</a>
+                        <a href="#">Whey Protein</a>
+                        <a href="#">Peanut Butter</a>
+                        <a href="#">Muscle Mass Builders</a>
+                        <a href="#">Protein Bars</a>
+                        <a href="#">Pre Workout</a>
+                        <a href="#">Post Workout</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Vitamins &amp; Supplements</h4>
+                        <a href="#">Vitamin C</a>
+                        <a href="#">Vitamin D</a>
+                        <a href="#">Vitamin B</a>
+                        <a href="#">Vitamin A</a>
+                        <a href="#">Vitamin E</a>
+                        <a href="#">Multivitamins</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Minerals</h4>
+                        <a href="#">Calcium</a>
+                        <a href="#">Iron</a>
+                        <a href="#">Magnesium</a>
+                        <a href="#">Zinc</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Omega &amp; Fish Oil</h4>
+                        <a href="#">Fish Oil</a>
+                        <a href="#">Cod Liver Oil</a>
+                        <a href="#">Flaxseed Oil</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Women Care</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Feminine Hygiene</h4>
+                        <a href="#">Sanitary Pads</a>
+                        <a href="#">Menstrual Cups</a>
+                        <a href="#">Tampons</a>
+                        <a href="#">Panty Liners</a>
+                        <a href="#">Intimate Care</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Women Supplements</h4>
+                        <a href="#">Nutritional Drinks</a>
+                        <a href="#">Women's Multivitamins</a>
+                        <a href="#">Health Tonics</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Gyno Care</h4>
+                        <a href="#">Menstrual Care</a>
+                        <a href="#">Ovulation</a>
+                        <a href="#">Menopause</a>
+                        <a href="#">PCOS</a>
+                        <a href="#">Cramp Relief</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Grooming</h4>
+                        <a href="#">Hair Removal</a>
+                        <a href="#">Razors &amp; Cartridges</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Personal Care</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Skin Care</h4>
+                        <a href="#">Bath &amp; Body</a>
+                        <a href="#">Face Care</a>
+                        <a href="#">Beauty</a>
+                        <a href="#">Lip Care</a>
+                        <a href="#">Foot &amp; Hand Care</a>
+                        <a href="#">Facial Wipes</a>
+                        <a href="#">Massage &amp; Essential Oils</a>
+                        <a href="#">Hand Wash &amp; Sanitizers</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Hair Care</h4>
+                        <a href="#">Hair Oils</a>
+                        <a href="#">Shampoos</a>
+                        <a href="#">Conditioners</a>
+                        <a href="#">Gels &amp; Serums</a>
+                        <a href="#">Hair Creams &amp; Packs</a>
+                        <a href="#">Hair Colors</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Oral Care</h4>
+                        <a href="#">Toothpaste</a>
+                        <a href="#">Tooth Brush &amp; Tongue Cleaner</a>
+                        <a href="#">Mouth Wash</a>
+                        <a href="#">Mouth Freshners</a>
+                        <a href="#">Mouth &amp; Teeth Relief</a>
+                        <a href="#">Electric Brush &amp; Accessories</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Mens Grooming</h4>
+                        <a href="#">Razors &amp; Shaving Brush</a>
+                        <a href="#">Shaving Creams &amp; Foams</a>
+                        <a href="#">Cartridges</a>
+                        <a href="#">Gels &amp; After Shave Lotions</a>
+                        <h4>Sexual Wellness</h4>
+                        <a href="#">Condoms</a>
+                        <a href="#">Performance Enhancers &amp; Accessories</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Fragrances</h4>
+                        <h4>Adult Diapers</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Ayurveda</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Health Concerns</h4>
+                        <a href="#">Cold &amp; Cough</a>
+                        <a href="#">Diabetic Care</a>
+                        <a href="#">Abdomen Care</a>
+                        <a href="#">Liver Care</a>
+                        <a href="#">Sexual Health Care</a>
+                        <a href="#">Immunity Boosters</a>
+                        <a href="#">Skin Hair &amp; Nails Care</a>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Herbs</h4>
+                        <a href="#">Amla</a>
+                        <a href="#">Tulsi</a>
+                        <a href="#">Aloe Vera</a>
+                        <a href="#">Ashwagandha</a>
+                        <a href="#">Giloy</a>
+                        <a href="#">Triphala</a>
+                        <a href="#">Shilajit</a>
+                        <a href="#">Neem</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Herbs</h4>
+                        <a href="#">Haldi</a>
+                        <h4>Herbal Juices</h4>
+                        <h4>Chyawanprash</h4>
+                        <h4>Honey</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Health Devices</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>BP Monitors</h4>
+                        <h4>Glucometers &amp; Test Strips</h4>
+                        <h4>Covid Test Kits</h4>
+                        <h4>Thermometers</h4>
+                        <h4>Pulse Oximeters</h4>
+                        <h4>Pregnancy test Kit</h4>
+                        <h4>Heating Belts</h4>
+                        <h4>Weighing Machine</h4>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Nebulizer</h4>
+                        <h4>Supports &amp; Splints</h4>
+                        <a href="#">Abdominal Supports</a>
+                        <a href="#">Arm &amp; Wrist Supports</a>
+                        <a href="#">Knee &amp; Leg Supports</a>
+                        <a href="#">Neck Supports</a>
+                        <a href="#">Clavicle Supports</a>
+                    </div>
+                    <div class="mega-menu__col">
+                        <h4>Health Accessories</h4>
+                        <a href="#">Ortho Slippers</a>
+                        <a href="#">Gloves</a>
+                        <a href="#">Neck Pillow</a>
+                        <a href="#">Other Health Accessories</a>
+                        <a href="#">Face Mask</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Home Essentials</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Insect Repellents</h4>
+                        <h4>Antiseptic Liquids</h4>
+                        <h4>Room Freshners</h4>
+                        <h4>Cleaning Essentials</h4>
+                        <h4>Batteries</h4>
+                        <h4>Pet Food</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item menu-item--mega">
+                <button type="button" class="mega-trigger" aria-haspopup="true">Health Condition</button>
+                <div class="mega-menu">
+                    <div class="mega-menu__col">
+                        <h4>Mental Wellness</h4>
+                        <h4>Liver Care</h4>
+                        <h4>Diabetic</h4>
+                        <h4>Pain Relief</h4>
+                        <h4>Cardiac</h4>
+                        <a href="#">Blood Pressure</a>
+                        <a href="#">Cholesterol</a>
+                        <h4>Kidney Care</h4>
+                    </div>
+                    <div class="mega-menu__col alt">
+                        <h4>Stomach Care</h4>
+                        <h4>Respiratory</h4>
+                        <h4>Eye care</h4>
+                        <h4>Cold &amp; Cough</h4>
+                        <h4>Wound Care</h4>
+                        <h4>Sleep Aids</h4>
+                        <h4>Bone, Joint &amp; Muscle</h4>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="location-overlay" id="locationOverlay"></div>
+    <aside class="location-panel" id="locationPanel" aria-label="Delivery location panel">
+        <div class="location-panel__top">
+            <button type="button" class="location-panel__back" id="locationClose" aria-label="Close location panel">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <h3>Deliver to</h3>
+        </div>
+
+        <button type="button" class="location-panel__btn location-panel__btn--primary">
+            <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+            Current Location
+        </button>
+
+        <p class="location-panel__or">OR</p>
+
+        <button type="button" class="location-panel__btn location-panel__btn--outline">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Choose a different location
+        </button>
+    </aside>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal" aria-label="Order details popup">
+        <div class="cart-modal__top">
+            <h3>Order Details</h3>
+            <button type="button" class="cart-modal__close" id="cartClose" aria-label="Close order details">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="cart-modal__body">
+            <p class="cart-modal__empty" id="cartEmptyText">Your cart is empty. Add items to see order details.</p>
+            <div class="cart-modal__list" id="cartItemsList"></div>
+            <p class="cart-modal__row"><span>Items</span><strong id="cartItemsCount">0</strong></p>
+            <p class="cart-modal__row"><span>Subtotal</span><strong id="cartSubtotal">Rs 0</strong></p>
+            <p class="cart-modal__row"><span>Delivery Fee</span><strong id="cartDeliveryFee">Rs 0</strong></p>
+            <p class="cart-modal__row"><span>Discount</span><strong id="cartDiscount">Rs 0</strong></p>
+            <p class="cart-modal__row cart-modal__row--total"><span>Total</span><strong id="cartTotal">Rs 0</strong></p>
+        </div>
+
+        <button type="button" class="cart-modal__checkout" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+
+    <div class="login-overlay" id="loginOverlay"></div>
+    <div class="login-modal" id="loginModal" aria-label="Login form popup">
+        <div class="login-modal__top">
+            <h3>Login</h3>
+            <button type="button" class="login-modal__close" id="loginClose" aria-label="Close login form">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="login-modal__body">
+            <label for="loginName">Full Name</label>
+            <input type="text" id="loginName" placeholder="Enter your name">
+
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email">
+
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter password">
+
+            <p class="login-modal__error" id="loginError"></p>
+            <button type="button" class="login-modal__submit" id="loginSubmit">Login Now</button>
+        </div>
+    </div>
+
+    <div class="success-overlay" id="successOverlay"></div>
+    <div class="success-modal" id="successModal" aria-label="Login success popup">
+        <div class="success-modal__icon">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+        </div>
+        <h3 id="successTitle">Successful</h3>
+        <p id="successMessage">Welcome! You have logged in successfully.</p>
+        <button type="button" id="successOkBtn">OK</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="promoOfferOverlay"></div>
+    <div class="promo-offer-modal" id="promoOfferModal" aria-label="Promo offer popup">
+        <div class="promo-offer-modal__top">
+            <h3>Get 20% Off on Medicines</h3>
+            <button type="button" id="promoOfferClose" aria-label="Close promo popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p>Use code <strong>MED20</strong> and save up to Rs 300 on medicine orders.</p>
+        <ul>
+            <li>Valid on selected medicine products</li>
+            <li>Minimum order value: Rs 699</li>
+            <li>Offer valid till this weekend</li>
+        </ul>
+        <button type="button" id="promoOfferOk">Got it</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="doctorOfferOverlay"></div>
+    <div class="promo-offer-modal" id="doctorOfferModal" aria-label="Doctor appointment popup">
+        <div class="promo-offer-modal__top">
+            <h3>Doctor Appointment Booking</h3>
+            <button type="button" id="doctorOfferClose" aria-label="Close doctor appointment popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p>Book a consultation with certified doctors from home in just a few steps.</p>
+        <ul>
+            <li>Choose speciality and preferred time slot</li>
+            <li>Video and in-clinic consultations available</li>
+            <li>Instant confirmation with reminder alerts</li>
+        </ul>
+        <button type="button" id="doctorOfferOk">Book Now</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="insuranceOfferOverlay"></div>
+    <div class="promo-offer-modal" id="insuranceOfferModal" aria-label="Health insurance popup">
+        <div class="promo-offer-modal__top">
+            <h3>Health Insurance Plans</h3>
+            <button type="button" id="insuranceOfferClose" aria-label="Close health insurance popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p>Protect your family with affordable health coverage and cashless hospital support.</p>
+        <ul>
+            <li>Plans for individual, couple, and family coverage</li>
+            <li>Compare premiums and benefits in one place</li>
+            <li>Quick claim guidance and policy assistance</li>
+        </ul>
+        <button type="button" id="insuranceOfferOk">Explore Plans</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="labOfferOverlay"></div>
+    <div class="promo-offer-modal" id="labOfferModal" aria-label="Lab tests popup">
+        <div class="promo-offer-modal__top">
+            <h3>Lab Tests at Home</h3>
+            <button type="button" id="labOfferClose" aria-label="Close lab tests popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p>Book diagnostic tests from home with sample collection and quick digital reports.</p>
+        <ul>
+            <li>Health check-up packages with affordable pricing</li>
+            <li>Trained phlebotomists for at-home sample collection</li>
+            <li>Fast report delivery with doctor consultation support</li>
+        </ul>
+        <button type="button" id="labOfferOk">Book Lab Test</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="diabetesOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="diabetesModal" aria-label="Diabetes care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Diabetes Care Guide</h3>
+            <button type="button" id="diabetesClose" aria-label="Close diabetes popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=500&h=320&q=80" alt="Blood glucose check device">
+            <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=500&h=320&q=80" alt="Diabetes medicine and care products">
+        </div>
+        <p>Follow these daily instructions to manage blood sugar levels better:</p>
+        <ul>
+            <li>Check blood glucose at the same time each day and track readings.</li>
+            <li>Take prescribed medicines on time and do not skip doses.</li>
+            <li>Prefer low sugar, high-fiber meals and drink enough water.</li>
+            <li>Walk for at least 30 minutes daily and sleep on time.</li>
+            <li>Consult your doctor immediately if readings stay high for many days.</li>
+        </ul>
+        <button type="button" id="diabetesOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="cardiacOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="cardiacModal" aria-label="Cardiac care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Cardiac Care Guide</h3>
+            <button type="button" id="cardiacClose" aria-label="Close cardiac popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=320&q=80" alt="Heart health checkup">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=500&h=320&q=80" alt="Cardiac medicine and monitoring">
+        </div>
+        <p>Follow these cardiac care instructions for a healthier heart:</p>
+        <ul>
+            <li>Monitor blood pressure regularly and keep a weekly record.</li>
+            <li>Reduce salty and oily foods; follow a heart-friendly diet.</li>
+            <li>Take cardiac medications exactly as prescribed by your doctor.</li>
+            <li>Walk or do light exercise for at least 30 minutes daily.</li>
+            <li>Do routine checkups and seek help immediately for chest discomfort.</li>
+        </ul>
+        <button type="button" id="cardiacOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="stomachOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="stomachModal" aria-label="Stomach care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Stomach Care Guide</h3>
+            <button type="button" id="stomachClose" aria-label="Close stomach popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=500&h=320&q=80" alt="Digestive care consultation">
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=500&h=320&q=80" alt="Stomach care medicines and hydration">
+        </div>
+        <p>Follow these stomach care instructions to reduce digestive discomfort:</p>
+        <ul>
+            <li>Eat light meals at regular times and avoid overeating.</li>
+            <li>Reduce spicy, oily, and very acidic foods.</li>
+            <li>Drink enough water and include fiber-rich foods daily.</li>
+            <li>Take antacid or digestive medicines only as advised.</li>
+            <li>Visit a doctor if pain, acidity, or bloating continues.</li>
+        </ul>
+        <button type="button" id="stomachOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="painOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="painModal" aria-label="Pain relief popup">
+        <div class="promo-offer-modal__top">
+            <h3>Pain Relief Guide</h3>
+            <button type="button" id="painClose" aria-label="Close pain relief popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&h=320&q=80" alt="Pain relief consultation and medicines">
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=500&h=320&q=80" alt="Pain relief gels and tablets">
+        </div>
+        <p>Follow these pain relief tips to manage common body aches safely:</p>
+        <ul>
+            <li>Use pain relief medicine only in the recommended dosage.</li>
+            <li>Apply hot or cold compress depending on the type of pain.</li>
+            <li>Stay hydrated and take proper rest for faster recovery.</li>
+            <li>Avoid heavy lifting and sudden strain during recovery.</li>
+            <li>Consult a doctor if pain continues for more than a few days.</li>
+        </ul>
+        <button type="button" id="painOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="liverOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="liverModal" aria-label="Liver care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Liver Care Guide</h3>
+            <button type="button" id="liverClose" aria-label="Close liver popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&h=320&q=80" alt="Liver care medical consultation">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&h=320&q=80" alt="Liver support medicines and healthy supplements">
+        </div>
+        <p>Use these liver care instructions to support better liver health:</p>
+        <ul>
+            <li>Avoid alcohol and reduce processed or oily foods.</li>
+            <li>Drink enough water and follow a balanced diet.</li>
+            <li>Take liver supplements and medicines only as prescribed.</li>
+            <li>Do regular exercise and maintain healthy body weight.</li>
+            <li>Consult your doctor if fatigue, appetite loss, or jaundice appears.</li>
+        </ul>
+        <button type="button" id="liverOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="oralOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="oralModal" aria-label="Oral care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Oral Care Guide</h3>
+            <button type="button" id="oralClose" aria-label="Close oral care popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=500&h=320&q=80" alt="Oral care dental consultation">
+            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=500&h=320&q=80" alt="Toothbrush and oral hygiene products">
+        </div>
+        <p>Follow these oral care instructions to maintain healthy teeth and gums:</p>
+        <ul>
+            <li>Brush twice daily with fluoride toothpaste for at least 2 minutes.</li>
+            <li>Floss once a day to remove food particles between teeth.</li>
+            <li>Limit sugary snacks and rinse mouth after meals.</li>
+            <li>Replace your toothbrush every 3 months.</li>
+            <li>Visit your dentist regularly for cleaning and oral checkups.</li>
+        </ul>
+        <button type="button" id="oralOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="respiratoryOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="respiratoryModal" aria-label="Respiratory care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Respiratory Care Guide</h3>
+            <button type="button" id="respiratoryClose" aria-label="Close respiratory popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=500&h=320&q=80" alt="Respiratory doctor consultation">
+            <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=500&h=320&q=80" alt="Respiratory care medicines and inhaler products">
+        </div>
+        <p>Follow these respiratory care instructions for better breathing health:</p>
+        <ul>
+            <li>Avoid smoke, dust, and pollution-heavy areas as much as possible.</li>
+            <li>Use inhalers or respiratory medicines exactly as prescribed.</li>
+            <li>Drink warm fluids and stay hydrated throughout the day.</li>
+            <li>Practice breathing exercises to improve lung function.</li>
+            <li>Visit a doctor quickly if cough or breathlessness persists.</li>
+        </ul>
+        <button type="button" id="respiratoryOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="sexualOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="sexualModal" aria-label="Sexual health popup">
+        <div class="promo-offer-modal__top">
+            <h3>Sexual Health Guide</h3>
+            <button type="button" id="sexualClose" aria-label="Close sexual health popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&h=320&q=80" alt="Sexual health consultation support">
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=500&h=320&q=80" alt="Sexual wellness care products">
+        </div>
+        <p>Follow these basic sexual health instructions for better wellbeing:</p>
+        <ul>
+            <li>Maintain personal hygiene and follow safe health practices.</li>
+            <li>Use prescribed wellness products only as directed.</li>
+            <li>Avoid self-medication for persistent symptoms.</li>
+            <li>Consult certified doctors for confidential guidance.</li>
+            <li>Do regular health checkups and stay informed.</li>
+        </ul>
+        <button type="button" id="sexualOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="elderlyOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="elderlyModal" aria-label="Elderly care popup">
+        <div class="promo-offer-modal__top">
+            <h3>Elderly Care Guide</h3>
+            <button type="button" id="elderlyClose" aria-label="Close elderly care popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=500&h=320&q=80" alt="Elderly care consultation">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=320&q=80" alt="Elderly wellness support and care products">
+        </div>
+        <p>Follow these elderly care instructions for safer daily health management:</p>
+        <ul>
+            <li>Track blood pressure, sugar, and medicines daily.</li>
+            <li>Ensure balanced meals, hydration, and proper sleep.</li>
+            <li>Use mobility aids and prevent falls at home.</li>
+            <li>Keep regular doctor checkups and emergency contacts ready.</li>
+            <li>Encourage light exercise and social interaction every day.</li>
+        </ul>
+        <button type="button" id="elderlyOk">Understood</button>
+    </div>
+
+    <div class="promo-offer-overlay" id="immunityOverlay"></div>
+    <div class="promo-offer-modal condition-popup" id="immunityModal" aria-label="Cold and immunity popup">
+        <div class="promo-offer-modal__top">
+            <h3>Cold &amp; Immunity Guide</h3>
+            <button type="button" id="immunityClose" aria-label="Close cold and immunity popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="condition-popup__images">
+            <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=500&h=320&q=80" alt="Cold and immunity consultation">
+            <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=500&h=320&q=80" alt="Immunity products and medicines">
+        </div>
+        <p>Follow these tips to manage cold symptoms and boost immunity:</p>
+        <ul>
+            <li>Stay hydrated and take warm fluids frequently.</li>
+            <li>Use prescribed cold-relief medicines on time.</li>
+            <li>Consume vitamin-rich foods and immunity supplements.</li>
+            <li>Take enough rest and avoid sudden weather exposure.</li>
+            <li>Consult a doctor if fever or cough continues.</li>
+        </ul>
+        <button type="button" id="immunityOk">Understood</button>
+    </div>
+
+    <section class="banner" id="mainBanner">
+        <button class="banner__arrow banner__arrow--left" id="bannerPrev" type="button" aria-label="Previous banner">
+            <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="banner__content">
+            <p class="banner__eyebrow">MedPharma Collection</p>
+            <h2>Trusted Medicines for Everyday Care</h2>
+            <button class="banner__cta" id="buyMedicineCta" type="button">Buy Medicines</button>
+        </div>
+
+        <button class="banner__arrow banner__arrow--right" id="bannerNext" type="button" aria-label="Next banner">
+            <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+        </button>
+    </section>
+
+    <div class="buy-medicine-overlay" id="buyMedicineOverlay"></div>
+    <div class="buy-medicine-modal" id="buyMedicineModal" aria-label="Buy medicines product explorer">
+        <div class="buy-medicine-modal__top">
+            <h3>Buy Medicines</h3>
+            <button type="button" id="buyMedicineClose" aria-label="Close buy medicines popup">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="buy-medicine-modal__body">
+            <aside class="buy-medicine-filters">
+                <div class="buy-medicine-filters__group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="category" value="prescription" checked> Prescription Medicines</label>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="category" value="otc" checked> OTC Medicines</label>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="category" value="wellness" checked> Wellness Products</label>
+                </div>
+
+                <div class="buy-medicine-filters__group">
+                    <h4>Health Needs</h4>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="health" value="fever" checked> Fever &amp; Pain</label>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="health" value="cold" checked> Cold &amp; Cough</label>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="health" value="diabetes"> Diabetes Care</label>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="health" value="heart"> Heart Health</label>
+                </div>
+
+                <div class="buy-medicine-filters__group">
+                    <h4>Availability</h4>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="availability" value="stock" checked> In Stock</label>
+                    <label><input type="checkbox" class="buy-medicine-filter" data-group="availability" value="rx"> Prescription Required</label>
+                </div>
+            </aside>
+
+            <div class="buy-medicine-products">
+                <div class="buy-medicine-products__search">
+                    <input type="text" id="buyMedicineSearch" placeholder="Search medicines by name...">
+                </div>
+
+                <div class="buy-medicine-products__grid">
+                    <article class="buy-medicine-card" data-category="prescription" data-health="fever" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=340&h=220&q=80" alt="Paracetamol tablets strip">
+                        <h5 class="buy-medicine-card__title">Paracetamol 650mg Tablets</h5>
+                        <p>Rs. 38</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="otc" data-health="cold" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=340&h=220&q=80" alt="Cough syrup bottle">
+                        <h5 class="buy-medicine-card__title">Cough Relief Syrup 100ml</h5>
+                        <p>Rs. 92</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="wellness" data-health="cold" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=340&h=220&q=80" alt="Vitamin C supplement bottle">
+                        <h5 class="buy-medicine-card__title">Vitamin C Immunity Tablets</h5>
+                        <p>Rs. 180</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="wellness" data-health="fever" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=340&h=220&q=80" alt="Digital thermometer device">
+                        <h5 class="buy-medicine-card__title">Digital Thermometer</h5>
+                        <p>Rs. 249</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="wellness" data-health="heart" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=340&h=220&q=80" alt="Blood pressure monitor kit">
+                        <h5 class="buy-medicine-card__title">Blood Pressure Monitor</h5>
+                        <p>Rs. 1499</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="otc" data-health="cold" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=340&h=220&q=80" alt="Hand sanitizer bottle">
+                        <h5 class="buy-medicine-card__title">Hand Sanitizer 500ml</h5>
+                        <p>Rs. 120</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="prescription" data-health="diabetes" data-availability="rx">
+                        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=340&h=220&q=80" alt="Diabetes test strips box">
+                        <h5 class="buy-medicine-card__title">Diabetes Test Strips, 50 Count</h5>
+                        <p>Rs. 699</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="prescription" data-health="heart" data-availability="rx">
+                        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=340&h=220&q=80" alt="Cardiac support tablet strip">
+                        <h5 class="buy-medicine-card__title">Cardiac Support Tablets, 10 Count</h5>
+                        <p>Rs. 220</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="otc" data-health="fever" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1616671276441-2f2c277b8bf9?auto=format&fit=crop&w=340&h=220&q=80" alt="ORS sachets pack">
+                        <h5 class="buy-medicine-card__title">ORS Hydration Sachets, Pack of 10</h5>
+                        <p>Rs. 165</p>
+                    </article>
+
+                    <article class="buy-medicine-card" data-category="wellness" data-health="cold" data-availability="stock">
+                        <img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?auto=format&fit=crop&w=340&h=220&q=80" alt="Zinc immunity capsules bottle">
+                        <h5 class="buy-medicine-card__title">Zinc Immunity Capsules, 60 Count</h5>
+                        <p>Rs. 340</p>
+                    </article>
+                </div>
+                <p class="buy-medicine-products__empty" id="buyMedicineNoResult">No products found.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="promo-strip">
+        <a class="promo-card promo-card--green" href="#" id="promoOfferCard">
+            <div class="promo-card__icon"><i class="fa-solid fa-file-medical"></i></div>
+            <div class="promo-card__text">
+                <h3>Get 20%* off on Medicines</h3>
+                <p>UPI | GO NOW</p>
+            </div>
+            
+        </a>
+
+        <a class="promo-card promo-card--violet" href="#" id="doctorOfferCard">
+            <div class="promo-card__icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <div class="promo-card__text">
+                <h3>Doctor Appointment</h3>
+                <p>BOOK NOW</p>
+            </div>
+            
+        </a>
+
+        <a class="promo-card promo-card--yellow" href="#" id="insuranceOfferCard">
+            <div class="promo-card__icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="promo-card__text">
+                <h3>Health Insurance</h3>
+                <p>EXPLORE PLANS</p>
+            </div>
+            
+        </a>
+
+        <a class="promo-card promo-card--pink" href="#" id="labOfferCard">
+            <div class="promo-card__icon"><i class="fa-solid fa-vials"></i></div>
+            <div class="promo-card__text">
+                <h3>Lab Tests</h3>
+                <p>AT HOME</p>
+            </div>
+            
+        </a>
+    </section>
+
+    <section class="condition-section">
+        <h2>Browse by Health Conditions</h2>
+
+        <div class="condition-grid">
+            <a class="condition-card" href="#" id="diabetesCard">
+                <div class="condition-card__icon condition-card__icon--amber"><i class="fa-solid fa-syringe"></i></div>
+                <span>Diabetes Care</span>
+            </a>
+
+            <a class="condition-card" href="#" id="cardiacCard">
+                <div class="condition-card__icon condition-card__icon--slate"><i class="fa-solid fa-heart-pulse"></i></div>
+                <span>Cardiac Care</span>
+            </a>
+
+            <a class="condition-card" href="#" id="stomachCard">
+                <div class="condition-card__icon condition-card__icon--amber"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                <span>Stomach Care</span>
+            </a>
+
+            <a class="condition-card" href="#" id="painCard">
+                <div class="condition-card__icon condition-card__icon--slate"><i class="fa-solid fa-bandage"></i></div>
+                <span>Pain Relief</span>
+            </a>
+
+            <a class="condition-card" href="#" id="liverCard">
+                <div class="condition-card__icon condition-card__icon--amber"><i class="fa-solid fa-pills"></i></div>
+                <span>Liver Care</span>
+            </a>
+
+            <a class="condition-card" href="#" id="oralCard">
+                <div class="condition-card__icon condition-card__icon--slate"><i class="fa-solid fa-tooth"></i></div>
+                <span>Oral Care</span>
+            </a>
+
+            <a class="condition-card" href="#" id="respiratoryCard">
+                <div class="condition-card__icon condition-card__icon--slate"><i class="fa-solid fa-lungs"></i></div>
+                <span>Respiratory</span>
+            </a>
+
+            <a class="condition-card" href="#" id="sexualCard">
+                <div class="condition-card__icon condition-card__icon--amber"><i class="fa-solid fa-venus-mars"></i></div>
+                <span>Sexual Health</span>
+            </a>
+
+            <a class="condition-card" href="#" id="elderlyCard">
+                <div class="condition-card__icon condition-card__icon--slate"><i class="fa-solid fa-user-group"></i></div>
+                <span>Elderly Care</span>
+            </a>
+
+            <a class="condition-card" href="#" id="immunityCard">
+                <div class="condition-card__icon condition-card__icon--amber"><i class="fa-solid fa-shield-virus"></i></div>
+                <span>Cold &amp; Immunity</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="value-deals value-deals--slider">
+        <div class="value-deals__top">
+            <h2>Value Deals at Rs 100</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="value-deals__track-wrap">
+            <button class="value-deals__nav value-deals__nav--left" id="valueDealsPrev" type="button" aria-label="Previous deals">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="value-deals__track" id="valueDealsTrack">
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1616671276441-2f2c277b8bf9?auto=format&fit=crop&w=320&h=320&q=80" alt="Aqua blue hand wash bottle">
+                    <h3>MedPharma Essentials Aqua Blue Hand Wash, 500 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 99.2</span>
+                        <span class="deal-card__old">Rs 160</span>
+                        <span class="deal-card__off">38% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=320&h=320&q=80" alt="Refreshing body wash bottle">
+                    <h3>MedPharma Essentials Refreshing Body Wash, 400 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 100</span>
+                        <span class="deal-card__old">Rs 200</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=320&h=320&q=80" alt="Citrus wet wipes pack">
+                    <h3>MedPharma Life Premium Citrus Refreshing Wet Wipes, 60s</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 99.2</span>
+                        <span class="deal-card__old">Rs 160</span>
+                        <span class="deal-card__off">38% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=320&h=320&q=80" alt="Aloe vera skin care gel bottle">
+                    <h3>MedPharma Life Aloe Vera Skin Care Gel, 200 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 99.2</span>
+                        <span class="deal-card__old">Rs 160</span>
+                        <span class="deal-card__off">38% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=320&h=320&q=80" alt="Sandal soap pack">
+                    <h3>MedPharma Essentials Sandal Soap, 250 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 99.4</span>
+                        <span class="deal-card__old">Rs 177.5</span>
+                        <span class="deal-card__off">44% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=320&h=320&q=80" alt="ORS orange drink pack">
+                    <h3>MedPharma Pharmacy ORS Orange Flavour Drink, 1 L</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 100.44</span>
+                        <span class="deal-card__old">Rs 124</span>
+                        <span class="deal-card__off">19% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=320&h=320&q=80" alt="Skin care gel pack">
+                    <h3>MedPharma Life Cooling Skin Relief Gel, 100 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 95.5</span>
+                        <span class="deal-card__old">Rs 140</span>
+                        <span class="deal-card__off">32% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=320&h=320&q=80" alt="Bath soap combo pack">
+                    <h3>MedPharma Essentials Bath Soap Combo, Pack of 4</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 89</span>
+                        <span class="deal-card__old">Rs 130</span>
+                        <span class="deal-card__off">31% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=320&h=320&q=80" alt="Body wash family pack">
+                    <h3>MedPharma Essentials Body Wash Family Pack, 750 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 129.5</span>
+                        <span class="deal-card__old">Rs 210</span>
+                        <span class="deal-card__off">38% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=320&h=320&q=80" alt="Travel hygiene wipes">
+                    <h3>MedPharma Travel Hygiene Wipes, Pack of 80</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 104</span>
+                        <span class="deal-card__old">Rs 165</span>
+                        <span class="deal-card__off">37% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+            </div>
+
+            <button class="value-deals__nav value-deals__nav--right" id="valueDealsNext" type="button" aria-label="Next deals">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="value-deals value-deals--slider">
+        <div class="value-deals__top">
+            <h2>Best of Skincare by CeraVe</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="value-deals__track-wrap">
+            <button class="value-deals__nav value-deals__nav--left" id="ceraveDealsPrev" type="button" aria-label="Previous skincare deals">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="value-deals__track" id="ceraveDealsTrack">
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe moisturising lotion bottle">
+                    <h3>CeraVe Moisturising Lotion for Normal to Dry Skin, 236 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1487.5</span>
+                        <span class="deal-card__old">Rs 1750</span>
+                        <span class="deal-card__off">15% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe foaming cleanser bottle">
+                    <h3>CeraVe Foaming Cleanser, 473 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1402.5</span>
+                        <span class="deal-card__old">Rs 1650</span>
+                        <span class="deal-card__off">15% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe moisturising cream jar and tube">
+                    <h3>CeraVe Moisturising Cream, 454 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1615</span>
+                        <span class="deal-card__old">Rs 1900</span>
+                        <span class="deal-card__off">15% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe hydrating cleanser bottle">
+                    <h3>CeraVe Hydrating Cleanser, 236 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 657</span>
+                        <span class="deal-card__old">Rs 730</span>
+                        <span class="deal-card__off">10% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe hydrating cleanser large bottle">
+                    <h3>CeraVe Hydrating Cleanser, 473 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 892.5</span>
+                        <span class="deal-card__old">Rs 1050</span>
+                        <span class="deal-card__off">15% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe PM facial moisturising lotion tube">
+                    <h3>CeraVe PM Facial Moisturising Lotion, 52 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1170</span>
+                        <span class="deal-card__old">Rs 1300</span>
+                        <span class="deal-card__off">10% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe moisturizing lotion extra pack">
+                    <h3>CeraVe Daily Moisturizing Lotion, 355 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1325</span>
+                        <span class="deal-card__old">Rs 1590</span>
+                        <span class="deal-card__off">17% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe cleanser value twin pack">
+                    <h3>CeraVe Cleanser Twin Pack, 2 x 236 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1249</span>
+                        <span class="deal-card__old">Rs 1499</span>
+                        <span class="deal-card__off">16% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=320&h=320&q=80" alt="CeraVe skin repair set">
+                    <h3>CeraVe Skin Repair Essential Set</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1799</span>
+                        <span class="deal-card__old">Rs 2190</span>
+                        <span class="deal-card__off">18% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+            </div>
+
+            <button class="value-deals__nav value-deals__nav--right" id="ceraveDealsNext" type="button" aria-label="Next skincare deals">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="value-deals value-deals--slider">
+        <div class="value-deals__top">
+            <h2>Minimum 50 Percent Off</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="value-deals__track-wrap">
+            <button class="value-deals__nav value-deals__nav--left" id="min50DealsPrev" type="button" aria-label="Previous minimum fifty percent deals">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="value-deals__track" id="min50DealsTrack">
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=320&h=320&q=80" alt="Nivea deodorant spray bottle">
+                    <h3>Nivea Men Fresh Active Deodorant Spray, 150 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 149.5</span>
+                        <span class="deal-card__old">Rs 299</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=320&h=320&q=80" alt="Lacto calamine sunscreen tube">
+                    <h3>Lacto Calamine SPF 50 PA+++ UVA/UVB Sunscreen, 100 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 199.5</span>
+                        <span class="deal-card__old">Rs 399</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=320&h=320&q=80" alt="Dabur red toothpaste family pack">
+                    <h3>Dabur Red Toothpaste Family Pack 350 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 141.5</span>
+                        <span class="deal-card__old">Rs 283</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1616671276441-2f2c277b8bf9?auto=format&fit=crop&w=320&h=320&q=80" alt="Vaseline healthy bright body lotion">
+                    <h3>Vaseline Healthy Bright Sun + Pollution Protection, 200 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 337.5</span>
+                        <span class="deal-card__old">Rs 675</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=320&h=320&q=80" alt="Garnier vitamin C face wash tube">
+                    <h3>Garnier Bright Complete Vitamin C Face Wash, 150 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 341.1</span>
+                        <span class="deal-card__old">Rs 379</span>
+                        <span class="deal-card__off">10% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=320&h=320&q=80" alt="Johnson baby skincare wipes pack">
+                    <h3>Johnson's Baby Skincare Wipes, 72 Count</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 140</span>
+                        <span class="deal-card__old">Rs 280</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=320&h=320&q=80" alt="Herbal anti dandruff shampoo bottle">
+                    <h3>Herbal Anti Dandruff Shampoo, 340 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 189</span>
+                        <span class="deal-card__old">Rs 378</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=320&h=320&q=80" alt="Daily glow face cream tube">
+                    <h3>Daily Glow Face Cream, 100 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 225</span>
+                        <span class="deal-card__old">Rs 450</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=320&h=320&q=80" alt="Hydrating body lotion pump bottle">
+                    <h3>Hydrating Body Lotion Pump, 400 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 249</span>
+                        <span class="deal-card__old">Rs 498</span>
+                        <span class="deal-card__off">50% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+            </div>
+
+            <button class="value-deals__nav value-deals__nav--right" id="min50DealsNext" type="button" aria-label="Next minimum fifty percent deals">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="value-deals value-deals--slider">
+        <div class="value-deals__top">
+            <h2>Top Picks for Immunity Care</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="value-deals__track-wrap">
+            <button class="value-deals__nav value-deals__nav--left" id="immunityDealsPrev" type="button" aria-label="Previous immunity deals">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="value-deals__track" id="immunityDealsTrack">
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1616671276441-2f2c277b8bf9?auto=format&fit=crop&w=320&h=320&q=80" alt="Vitamin tonic bottle">
+                    <h3>Immunity Boost Vitamin Tonic, 500 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 269</span>
+                        <span class="deal-card__old">Rs 359</span>
+                        <span class="deal-card__off">25% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=320&h=320&q=80" alt="Electrolyte drink pack">
+                    <h3>Electrolyte Hydration Drink Pack, 1 L</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 119</span>
+                        <span class="deal-card__old">Rs 149</span>
+                        <span class="deal-card__off">20% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=320&h=320&q=80" alt="Immunity wet wipes pack">
+                    <h3>Antibacterial Wet Wipes, Pack of 60</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 89</span>
+                        <span class="deal-card__old">Rs 120</span>
+                        <span class="deal-card__off">26% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=320&h=320&q=80" alt="Aloe care gel bottle">
+                    <h3>Aloe Protect Care Gel, 200 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 179</span>
+                        <span class="deal-card__old">Rs 240</span>
+                        <span class="deal-card__off">25% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=320&h=320&q=80" alt="Herbal soap pack">
+                    <h3>Herbal Protection Soap, 250 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 99</span>
+                        <span class="deal-card__old">Rs 145</span>
+                        <span class="deal-card__off">32% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=320&h=320&q=80" alt="Body wash bottle">
+                    <h3>Daily Fresh Body Wash, 400 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 199</span>
+                        <span class="deal-card__old">Rs 279</span>
+                        <span class="deal-card__off">28% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=320&h=320&q=80" alt="Herbal immunity syrup">
+                    <h3>Herbal Immunity Syrup, 200 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 159</span>
+                        <span class="deal-card__old">Rs 230</span>
+                        <span class="deal-card__off">31% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=320&h=320&q=80" alt="Vitamin C wipes combo">
+                    <h3>Vitamin C Hygiene Wipes Combo, 2 Packs</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 149</span>
+                        <span class="deal-card__old">Rs 219</span>
+                        <span class="deal-card__off">32% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=320&h=320&q=80" alt="ORS hydration kit">
+                    <h3>ORS Hydration Recovery Kit, 3 Sachets</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 109</span>
+                        <span class="deal-card__old">Rs 160</span>
+                        <span class="deal-card__off">31% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+            </div>
+
+            <button class="value-deals__nav value-deals__nav--right" id="immunityDealsNext" type="button" aria-label="Next immunity deals">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="value-deals value-deals--slider">
+        <div class="value-deals__top">
+            <h2>Daily Wellness Essentials</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="value-deals__track-wrap">
+            <button class="value-deals__nav value-deals__nav--left" id="wellnessDealsPrev" type="button" aria-label="Previous wellness deals">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="value-deals__track" id="wellnessDealsTrack">
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=320&h=320&q=80" alt="Face wash tube">
+                    <h3>Vitamin C Face Wash, 150 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 329</span>
+                        <span class="deal-card__old">Rs 379</span>
+                        <span class="deal-card__off">13% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=320&h=320&q=80" alt="Skin cream jar">
+                    <h3>Daily Moisture Cream, 100 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 249</span>
+                        <span class="deal-card__old">Rs 320</span>
+                        <span class="deal-card__off">22% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=320&h=320&q=80" alt="Moisturising cream tube">
+                    <h3>Skin Nourish Moisturiser, 200 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 459</span>
+                        <span class="deal-card__old">Rs 599</span>
+                        <span class="deal-card__off">23% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?auto=format&fit=crop&w=320&h=320&q=80" alt="Cleanser bottle">
+                    <h3>Gentle Foaming Cleanser, 473 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 799</span>
+                        <span class="deal-card__old">Rs 940</span>
+                        <span class="deal-card__off">15% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=320&h=320&q=80" alt="Hydrating cleanser bottle">
+                    <h3>Hydrating Cleanser, 473 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 892.5</span>
+                        <span class="deal-card__old">Rs 1050</span>
+                        <span class="deal-card__off">15% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=320&h=320&q=80" alt="Night lotion tube">
+                    <h3>PM Night Repair Lotion, 52 ml</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 1170</span>
+                        <span class="deal-card__old">Rs 1300</span>
+                        <span class="deal-card__off">10% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=320&h=320&q=80" alt="SPF day cream tube">
+                    <h3>Daily SPF Protection Cream, 50 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 349</span>
+                        <span class="deal-card__old">Rs 499</span>
+                        <span class="deal-card__off">30% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=320&h=320&q=80" alt="Hydration gel cream jar">
+                    <h3>Hydration Gel Cream, 100 gm</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 299</span>
+                        <span class="deal-card__old">Rs 420</span>
+                        <span class="deal-card__off">29% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+
+                <article class="deal-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=320&h=320&q=80" alt="Gentle scrub and cleanser combo">
+                    <h3>Gentle Scrub and Cleanser Combo</h3>
+                    <p class="deal-card__price">
+                        <span class="deal-card__now">Rs 389</span>
+                        <span class="deal-card__old">Rs 560</span>
+                        <span class="deal-card__off">31% off</span>
+                    </p>
+                    <button class="deal-card__btn" type="button">ADD</button>
+                </article>
+            </div>
+
+            <button class="value-deals__nav value-deals__nav--right" id="wellnessDealsNext" type="button" aria-label="Next wellness deals">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="pharmacy-info">
+        <h2>EFFORTLESS ONLINE MEDICINE ORDERS AT MedPharma</h2>
+        <p>
+            Because ordering medicines online need not be complicated but rather a cakewalk. At MedPharma we ensure
+            that. All you need to do is:
+        </p>
+        <ul>
+            <li>Browse through our wide variety of products</li>
+            <li>Add products to your cart and complete the payment. Voila!</li>
+            <li>Your order will be on its way to you.</li>
+        </ul>
+        <p>
+            MedPharma is your go-to online pharmacy store for all your medicine needs. We also have a range of
+            products in the personal care, baby care, health and nutrition, wellness, and lifestyle categories.
+            Come explore 'everything under the sun' related to healthcare at MedPharma.
+        </p>
+
+        <h3>Reasons To Buy Medicine From MedPharma</h3>
+        <p>
+            For over 39 years, MedPharma has been providing you with genuine medicines round-the-clock, through
+            24-hour pharmacies. And now through MedPharma, we intend to make your lives easier - by getting your
+            medicines delivered to you. Yes, no more stepping out to get your medicines, no more standing in long queues,
+            no more worrying about the genuineness of medicines, no more sweat! Here are more reasons why you should buy
+            your medicines from MedPharma:
+        </p>
+        <ul>
+            <li>Super-fast deliveries. In select cities, deliveries are done in as less as 1 day</li>
+            <li>Largest pharmacy chain in India with over 5,600 stores</li>
+            <li>Attractive deals on medicines and other FMCG products</li>
+            <li>Get Health Credits on purchases (not applicable on discounted products)</li>
+            <li>Option to consult with a pharmacist to check medicine interactions</li>
+            <li>Wide range of healthcare products to choose from</li>
+            <li>Only genuine and top-quality products delivered.</li>
+        </ul>
+
+        <details class="pharmacy-info__more">
+            <summary>
+                <span class="show-more-text">Show More</span>
+                <span class="show-less-text">Show Less</span>
+            </summary>
+
+            <h3>How To Order Medicines Online In Minutes</h3>
+            <p>
+                Ordering medicines at MedPharma is designed to be quick and user-friendly. Search for the product, check
+                dosage details, compare pack sizes, and place your order in just a few clicks.
+            </p>
+            <ul>
+                <li>Use search to find medicines by name, salt, or brand</li>
+                <li>Upload your prescription securely where required</li>
+                <li>Choose delivery slot, apply offers, and complete payment</li>
+                <li>Track your order status from confirmation to doorstep delivery</li>
+            </ul>
+
+            <h3>Safe, Trusted, And Transparent Service</h3>
+            <p>
+                We follow strict quality checks across procurement, storage, and dispatch. Every order is packed carefully
+                so that your medicines and wellness products reach you safely and on time.
+            </p>
+            <ul>
+                <li>Reliable sourcing from trusted brands and verified partners</li>
+                <li>Temperature-aware handling for sensitive products</li>
+                <li>Clear product details, expiry information, and pricing</li>
+                <li>Easy support for order help, returns, and assistance</li>
+            </ul>
+
+            <h3>Shop More Than Medicines</h3>
+            <p>
+                MedPharma also offers daily healthcare essentials for your family. From personal care to nutrition and home
+                wellness, you can complete your monthly health shopping in one place.
+            </p>
+            <ul>
+                <li>Personal care, baby care, and hygiene essentials</li>
+                <li>Health devices and home care products</li>
+                <li>Nutrition supplements and wellness bundles</li>
+                <li>Regular deals, combo offers, and seasonal savings</li>
+            </ul>
+        </details>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer__main">
+            <div class="site-footer__brand">
+                <div class="logo">
+                    <div class="logo__icon">
+                        <i class="fa-solid fa-syringe" aria-hidden="true"></i>
+                    </div>
+                    <h2>MedPharma</h2>
+                </div>
+                <p>
+                    Your trusted online pharmacy for medicines, wellness products, personal care, and daily health
+                    essentials with fast delivery and genuine quality.
+                </p>
+                <div class="site-footer__social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="site-footer__links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Track Order</a>
+            </div>
+
+            <div class="site-footer__links">
+                <h3>Categories</h3>
+                <a href="#">Medicines</a>
+                <a href="#">Health Devices</a>
+                <a href="#">Personal Care</a>
+                <a href="#">Supplements</a>
+            </div>
+
+            <div class="site-footer__links">
+                <h3>Customer Support</h3>
+                <a href="#">FAQs</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Return Policy</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="site-footer__contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> support@medpharma.com</p>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Chennai, Tamil Nadu, India</p>
+            </div>
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>&copy; 2026 MedPharma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
